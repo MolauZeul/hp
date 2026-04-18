@@ -1,0 +1,959 @@
+:root {
+  --bg: #0e1517;
+  --bg-soft: #142125;
+  --panel: rgba(12, 24, 28, 0.76);
+  --panel-light: #f4ede3;
+  --panel-muted: #e3d5c0;
+  --line: rgba(212, 185, 140, 0.25);
+  --gold: #d4b98c;
+  --gold-strong: #f0d5a1;
+  --text: #f7f0e6;
+  --text-muted: rgba(247, 240, 230, 0.76);
+  --ink: #342a20;
+  --ink-soft: #6e5d4b;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  --radius-lg: 32px;
+  --radius-md: 22px;
+  --radius-sm: 16px;
+  --content: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Manrope", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 218, 157, 0.11), transparent 28%),
+    linear-gradient(180deg, #132227 0%, #0d1517 100%);
+  color: var(--text);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-shell::before,
+.page-shell::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.page-shell::before {
+  top: -10rem;
+  right: -12rem;
+  background: #a6d3bf;
+}
+
+.page-shell::after {
+  bottom: 10rem;
+  left: -14rem;
+  background: #d2a970;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar,
+.hero,
+.section,
+.site-footer {
+  width: min(calc(100% - 2rem), var(--content));
+  margin: 0 auto;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, transform 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 17, 19, 0.72);
+  border-color: var(--line);
+  backdrop-filter: blur(16px);
+  transform: translateY(0.35rem);
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.brand-mark,
+.nav-links a,
+.eyebrow,
+.panel-kicker,
+.feature-label,
+.gallery-tag,
+.aside-label {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold-strong);
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-strong);
+}
+
+.menu-button {
+  display: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  position: fixed;
+  inset: 5.6rem 1rem auto 1rem;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(9, 17, 19, 0.96);
+  backdrop-filter: blur(20px);
+  z-index: 19;
+}
+
+.mobile-menu a {
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 2rem;
+  min-height: calc(100vh - 6rem);
+  align-items: center;
+  padding: 4rem 0 5rem;
+}
+
+.hero-copy {
+  max-width: 46rem;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow,
+.panel-kicker,
+.feature-label,
+.gallery-tag,
+.aside-label {
+  font-size: 0.72rem;
+  color: var(--gold);
+}
+
+.hero h1,
+.section-heading h2,
+.history-card h3,
+.lady-card h3,
+.feature h3,
+.gallery-card h3,
+.visit-panel h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero h1 {
+  font-size: clamp(3.6rem, 7vw, 6.8rem);
+  line-height: 0.93;
+  margin-top: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.6rem;
+}
+
+.hero-links a {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(240, 213, 161, 0.5);
+  background: rgba(240, 213, 161, 0.12);
+}
+
+.hero-text {
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.2rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #f1d198, #cfa162);
+  color: #1f160f;
+}
+
+.button-secondary {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    rgba(13, 25, 28, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: auto -10% 78% auto;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 185, 140, 0.5), transparent 72%);
+}
+
+.panel-stats {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.panel-stats article {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.panel-stats strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-strong);
+}
+
+.panel-stats span {
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.intro-band {
+  width: min(calc(100% - 2rem), 980px);
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.intro-band p {
+  padding: 1.5rem 1.7rem;
+  border-left: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.section {
+  padding: 6rem 0 0;
+}
+
+.section-heading {
+  max-width: 42rem;
+  margin-bottom: 2.4rem;
+}
+
+.section-heading h2,
+.visit-panel h2 {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 0.98;
+  margin-top: 0.7rem;
+}
+
+.history-layout,
+.ladies-grid,
+.architecture-grid,
+.gardens-layout,
+.gardens-grid,
+.gallery-grid,
+.visit-section {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.history-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.history-card,
+.lady-card,
+.feature,
+.garden-spotlight,
+.garden-card,
+.gallery-card,
+.visit-panel,
+.visit-aside {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.history-card {
+  padding: 1.6rem;
+  min-height: 18rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+    rgba(17, 32, 36, 0.82);
+}
+
+.card-year {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(212, 185, 140, 0.12);
+  color: var(--gold-strong);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.history-card h3,
+.lady-card h3,
+.feature h3,
+.gallery-card h3 {
+  font-size: 2rem;
+  line-height: 1.02;
+  margin-bottom: 0.9rem;
+}
+
+.history-card p,
+.lady-card p,
+.feature p,
+.visit-panel p,
+.visit-panel li,
+.visit-aside li {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.ladies-section {
+  padding-top: 6.5rem;
+}
+
+.ladies-intro,
+.ladies-summary {
+  margin-bottom: 1.2rem;
+}
+
+.ladies-intro p,
+.summary-card p:last-child {
+  line-height: 1.9;
+}
+
+.ladies-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.lady-card {
+  padding: 1.5rem;
+  min-height: 16rem;
+  background:
+    linear-gradient(180deg, rgba(239, 220, 188, 0.98), rgba(226, 205, 176, 0.95));
+  color: var(--ink);
+}
+
+.lady-media {
+  margin-bottom: 0.65rem;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+}
+
+.lady-card::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(161, 122, 75, 0.2), transparent 68%);
+}
+
+.lady-card p {
+  color: var(--ink-soft);
+}
+
+.media-credit {
+  margin-bottom: 0.7rem;
+  font-size: 0.78rem;
+  color: rgba(52, 42, 32, 0.72);
+}
+
+.lady-card p + p {
+  margin-top: 0.95rem;
+}
+
+.summary-card {
+  max-width: 54rem;
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(14, 29, 33, 0.84);
+  box-shadow: var(--shadow);
+}
+
+.summary-card h3 {
+  margin: 0.7rem 0 0.9rem;
+  font-size: 2rem;
+  line-height: 1.02;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.architecture-grid {
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.feature {
+  min-height: 15rem;
+  padding: 1.6rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(15, 28, 32, 0.86);
+}
+
+.feature-large {
+  grid-row: span 2;
+  min-height: 31.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    linear-gradient(160deg, rgba(14, 30, 34, 0.96), rgba(29, 54, 58, 0.85));
+}
+
+.architecture-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.interior-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(14, 27, 30, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.interior-card .media-frame {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+}
+
+.interior-card .feature-label,
+.interior-card h3 {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.interior-card .feature-label {
+  padding-top: 1.1rem;
+}
+
+.interior-card h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 1.35rem;
+  font-size: 1.85rem;
+  line-height: 1.02;
+}
+
+.gallery-section {
+  padding-top: 6.5rem;
+}
+
+.gardens-section {
+  padding-top: 6.5rem;
+}
+
+.gardens-layout {
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  align-items: start;
+}
+
+.garden-spotlight,
+.garden-card {
+  padding: 1.6rem;
+}
+
+.media-frame {
+  margin: -1.6rem -1.6rem 1.3rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.garden-spotlight {
+  min-height: 100%;
+  background:
+    linear-gradient(180deg, rgba(233, 218, 191, 0.98), rgba(215, 231, 210, 0.95));
+  color: var(--ink);
+}
+
+.garden-spotlight p:last-child,
+.garden-card p:last-child {
+  line-height: 1.85;
+}
+
+.garden-spotlight h3,
+.garden-card h3 {
+  font-size: 2.1rem;
+  line-height: 1.02;
+  margin: 0.8rem 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.garden-spotlight p:last-child {
+  color: var(--ink-soft);
+}
+
+.gardens-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.garden-card {
+  min-height: 17rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    linear-gradient(150deg, rgba(52, 88, 74, 0.86), rgba(18, 32, 36, 0.92));
+}
+
+.gallery-grid {
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-auto-rows: minmax(14rem, auto);
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 18rem;
+  padding: 1.6rem;
+  background:
+    linear-gradient(180deg, transparent 5%, rgba(10, 20, 22, 0.8) 90%),
+    linear-gradient(140deg, rgba(219, 186, 138, 0.16), rgba(77, 123, 126, 0.28)),
+    #162527;
+}
+
+.gallery-photo {
+  background:
+    linear-gradient(180deg, rgba(6, 11, 13, 0.08) 0%, rgba(7, 14, 16, 0.82) 100%),
+    var(--card-image) center / cover no-repeat;
+}
+
+.gallery-card-wide {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+  min-height: 37.2rem;
+  max-width: 52rem;
+  width: 100%;
+  justify-self: center;
+}
+
+.gallery-card h3 {
+  max-width: 18rem;
+}
+
+.photo-sources {
+  margin-top: 1.4rem;
+}
+
+.photo-sources p:last-child {
+  margin-top: 0.55rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.photo-sources a {
+  color: var(--gold-strong);
+}
+
+.visit-section {
+  grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.8fr);
+  align-items: start;
+  padding-bottom: 6rem;
+}
+
+.closing-section {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.bibliography-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(13, 26, 29, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.bibliography-panel summary {
+  padding: 1.25rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: var(--gold-strong);
+}
+
+.bibliography-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.bibliography-panel summary::after {
+  content: "+";
+  float: right;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.bibliography-panel[open] summary::after {
+  content: "-";
+}
+
+.bibliography-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  padding: 0 1.4rem 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.bibliography-list {
+  margin: 0.9rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.bibliography-list a {
+  color: var(--text);
+}
+
+.project-credits {
+  margin-top: 0.9rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+.visit-panel {
+  padding: 1.8rem;
+  background:
+    linear-gradient(180deg, rgba(240, 227, 208, 0.98), rgba(227, 212, 190, 0.95));
+  color: var(--ink);
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.visit-grid article {
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.visit-grid h3 {
+  margin-bottom: 0.65rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.visit-grid p {
+  color: var(--ink-soft);
+}
+
+.visit-aside {
+  padding: 1.6rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+    rgba(15, 27, 30, 0.85);
+}
+
+.visit-points {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.visit-points li::marker {
+  color: var(--gold);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0 2.5rem;
+  color: rgba(247, 240, 230, 0.58);
+  font-size: 0.9rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 3rem;
+  }
+
+  .hero-panel {
+    max-width: 34rem;
+  }
+
+  .history-layout,
+  .ladies-grid,
+  .architecture-grid,
+  .gardens-layout,
+  .gardens-grid,
+  .architecture-photos,
+  .bibliography-content,
+  .gallery-grid,
+  .visit-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-large,
+  .gallery-card-wide {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar,
+  .hero,
+  .section,
+  .site-footer,
+  .intro-band {
+    width: min(calc(100% - 1.2rem), var(--content));
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+  }
+
+  .hero-links {
+    gap: 0.65rem;
+  }
+
+  .hero-links a {
+    width: calc(50% - 0.35rem);
+    text-align: center;
+  }
+
+  .history-layout,
+  .ladies-grid,
+  .architecture-grid,
+  .gardens-layout,
+  .gardens-grid,
+  .architecture-photos,
+  .bibliography-content,
+  .gallery-grid,
+  .visit-section,
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 4.5rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 0.85rem 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-links a {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .history-card,
+  .lady-card,
+  .feature,
+  .gallery-card,
+  .visit-panel,
+  .visit-aside {
+    border-radius: 20px;
+  }
+}

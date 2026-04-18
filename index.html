@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Découvrez le Château de Chenonceau, joyau de la Loire : son histoire, son architecture, ses jardins et les informations essentielles pour préparer votre visite."
+  >
+  <title>Château de Chenonceau</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header" id="top">
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+      <a class="brand" href="#top">
+        <span class="brand-mark">Chenonceau</span>
+        <span class="brand-sub">Château des Dames</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#histoire">Histoire</a></li>
+        <li><a href="#dames">Les Dames</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#jardins">Jardins</a></li>
+        <li><a href="#visite">Visite</a></li>
+      </ul>
+
+      <button id="btn-hamburger" class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">
+        Menu
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#histoire">Histoire</a>
+      <a href="#dames">Les Dames</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#jardins">Jardins</a>
+      <a href="#visite">Visite</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Val de Loire • Renaissance française • Sur le Cher</p>
+        <h1>Le château qui traverse la rivière et les siècles.</h1>
+        <nav class="hero-links" aria-label="Sections principales">
+          <a href="#histoire">Histoire</a>
+          <a href="#dames">Les Dames</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#jardins">Jardins</a>
+          <a href="#visite">Visite</a>
+        </nav>
+        <p class="hero-text">
+          Élégant, singulier et profondément lié à l'histoire des femmes de pouvoir,
+          le Château de Chenonceau est l'un des monuments les plus célèbres de France.
+          Sa galerie jetée sur le Cher, ses jardins ordonnés et sa mémoire de guerre
+          en font un lieu unique dans la vallée de la Loire.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#histoire">Explorer l'histoire</a>
+          <a class="button button-secondary" href="#visite">Préparer la visite</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal">
+        <p class="panel-kicker">Repères essentiels</p>
+        <div class="panel-stats">
+          <article>
+            <strong class="fact-number" data-value="1514">0</strong>
+            <span>début de la construction du château actuel</span>
+          </article>
+          <article>
+            <strong class="fact-number" data-value="60">0</strong>
+            <span>mètres environ pour la grande galerie au-dessus du Cher</span>
+          </article>
+          <article>
+            <strong>Loire</strong>
+            <span>patrimoine architectural majeur de la Renaissance</span>
+          </article>
+        </div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="intro-band reveal">
+      <p>
+        Surnommé le <strong>« Château des Dames »</strong>, Chenonceau doit sa personnalité
+        à plusieurs femmes d'exception, de Catherine Briçonnet à Catherine de Médicis.
+        Leur influence se lit encore dans la distribution des espaces, le raffinement
+        des jardins et l'image même du monument.
+      </p>
+    </section>
+
+    <section class="section split-section" id="histoire">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Histoire</p>
+        <h2>Cinq siècles de transformations, de fêtes et de résistance</h2>
+      </div>
+
+      <div class="history-layout">
+        <article class="history-card reveal">
+          <span class="card-year">XVIe siècle</span>
+          <h3>Une résidence Renaissance bâtie sur un ancien moulin</h3>
+          <p>
+            Le château actuel est édifié à partir de 1514 pour Thomas Bohier et Katherine
+            Briçonnet. Cette dernière supervise activement le chantier et donne au lieu
+            son premier visage Renaissance, lumineux, équilibré et tourné vers l'eau.
+          </p>
+        </article>
+
+        <article class="history-card reveal">
+          <span class="card-year">1535 - 1559</span>
+          <h3>Du domaine royal à l'élégance de Diane de Poitiers</h3>
+          <p>
+            Confisqué par François Ier, Chenonceau entre ensuite dans le domaine royal.
+            Henri II l'offre à Diane de Poitiers, qui fait créer le pont sur le Cher et
+            aménage un jardin régulier devenu l'un des emblèmes du site.
+          </p>
+        </article>
+
+        <article class="history-card reveal">
+          <span class="card-year">À partir de 1559</span>
+          <h3>Le goût du spectacle sous Catherine de Médicis</h3>
+          <p>
+            Après la mort d'Henri II, Catherine de Médicis reprend le château, fait
+            construire la célèbre galerie au-dessus du pont et transforme Chenonceau
+            en une scène de fêtes, de ballets, de cérémonies et de pouvoir.
+          </p>
+        </article>
+
+        <article class="history-card reveal">
+          <span class="card-year">XXe siècle</span>
+          <h3>Un lieu traversé par les conflits mondiaux</h3>
+          <p>
+            Pendant la Première Guerre mondiale, le château sert d'hôpital militaire.
+            Durant la Seconde Guerre mondiale, la galerie qui franchit le Cher devient
+            un passage symbolique entre zone occupée et zone libre.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section ladies-section" id="dames">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Les Dames</p>
+        <h2>Les femmes qui ont façonné Chenonceau</h2>
+      </div>
+
+      <div class="ladies-intro reveal">
+        <p>
+          Chenonceau est souvent appelé le <strong>« Château des Dames »</strong> parce que
+          plusieurs femmes y ont exercé une influence décisive. Certaines ont dirigé le
+          chantier, d'autres ont transformé les jardins, l'architecture ou l'atmosphère du
+          lieu. Ensemble, elles ont fait de Chenonceau un château moins militaire que
+          résidentiel, plus élégant que défensif, et profondément lié à l'art de vivre.
+        </p>
+        <p>
+          Leur héritage se voit particulièrement dans les jardins. À Chenonceau, les espaces
+          extérieurs ne sont pas séparés de l'histoire des femmes du château : ils reflètent
+          leurs goûts, leur pouvoir, leur manière d'organiser le paysage et leur volonté de
+          faire du domaine un lieu de beauté autant qu'un symbole de prestige.
+        </p>
+      </div>
+
+      <div class="ladies-grid">
+        <article class="lady-card reveal">
+          <div class="media-frame lady-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Unknown%20woman%20portrait%2C%20misidentified%20with%20Katherine%20Bri%C3%A7onnet%20-%20Chenonceau%2C%20circa%201630.webp"
+              alt="Portrait traditionnellement associé à Catherine Briçonnet, attribution discutée"
+              loading="lazy"
+            >
+          </div>
+          <p class="media-credit">Portrait traditionnellement associé à Catherine Briçonnet, attribution discutée</p>
+          <h3>Catherine Briçonnet</h3>
+          <p>
+            Présente dès l'origine du chantier au début du XVIe siècle, Catherine
+            Briçonnet ne se contente pas d'accompagner le projet : elle participe
+            réellement à son orientation. Pendant les absences de son mari Thomas Bohier,
+            elle suit les travaux et veille au caractère harmonieux de la résidence.
+          </p>
+          <p>
+            Son impact est essentiel : elle donne à Chenonceau son élégance Renaissance,
+            sa clarté, ses façades équilibrées et cette impression de raffinement qui
+            distingue le château d'une forteresse médiévale plus austère.
+          </p>
+          <p>
+            Même si les grands jardins formels sont développés plus tard, son héritage
+            prépare déjà cette évolution : elle impose l'idée d'un château conçu pour
+            l'harmonie, la lumière et l'agrément, ce qui favorise ensuite une relation
+            très forte entre architecture et paysage.
+          </p>
+        </article>
+
+        <article class="lady-card reveal">
+          <div class="media-frame lady-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/DianedePoitiers.jpg"
+              alt="Portrait de Diane de Poitiers"
+              loading="lazy"
+            >
+          </div>
+          <p class="media-credit">Portrait de Diane de Poitiers</p>
+          <h3>Diane de Poitiers</h3>
+          <p>
+            Favorite du roi Henri II, Diane de Poitiers reçoit Chenonceau et y affirme
+            immédiatement son goût pour l'ordre, la beauté et la mise en scène du pouvoir.
+            Elle fait aménager le célèbre jardin qui porte encore son nom, avec ses grands
+            axes, ses parterres rigoureux et sa composition majestueuse.
+          </p>
+          <p>
+            Elle fait aussi construire le pont sur le Cher. Ce choix est capital :
+            sans ce pont, la grande galerie qui fait aujourd'hui la célébrité mondiale
+            de Chenonceau n'aurait jamais pu exister sous cette forme.
+          </p>
+          <p>
+            Son influence sur les jardins est directe et durable. Le jardin de Diane de
+            Poitiers reste l'un des emblèmes du château : il exprime une vision du pouvoir
+            fondée sur la symétrie, l'élégance et une maîtrise presque théâtrale de la nature.
+          </p>
+        </article>
+
+        <article class="lady-card reveal">
+          <div class="media-frame lady-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Catherine-de-medici.jpg"
+              alt="Portrait de Catherine de Médicis"
+              loading="lazy"
+            >
+          </div>
+          <p class="media-credit">Portrait de Catherine de Médicis</p>
+          <h3>Catherine de Médicis</h3>
+          <p>
+            Après la mort d'Henri II, Catherine de Médicis reprend le château à Diane
+            de Poitiers. Figure majeure de la monarchie française, elle transforme
+            Chenonceau en un lieu de gouvernement, de prestige et de spectacle.
+          </p>
+          <p>
+            Son impact est immense : elle fait construire la grande galerie sur le pont,
+            organise des fêtes somptueuses, des ballets et des réceptions diplomatiques.
+            Grâce à elle, Chenonceau devient non seulement une demeure raffinée, mais
+            aussi un véritable théâtre du pouvoir royal.
+          </p>
+          <p>
+            Son héritage touche aussi les jardins : en développant son propre espace vert
+            et en utilisant les extérieurs comme décor de cérémonies, elle fait du jardin
+            un prolongement de la cour, un lieu de représentation politique autant qu'un
+            espace de promenade.
+          </p>
+        </article>
+
+        <article class="lady-card reveal">
+          <div class="media-frame lady-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Louise%20Lorraine.jpg"
+              alt="Portrait de Louise de Lorraine"
+              loading="lazy"
+            >
+          </div>
+          <p class="media-credit">Portrait de Louise de Lorraine</p>
+          <h3>Louise de Lorraine</h3>
+          <p>
+            Veuve du roi Henri III, Louise de Lorraine donne au château une dimension
+            plus intime et mélancolique. Après l'assassinat du roi, elle se retire dans
+            un univers marqué par le deuil, la prière et la mémoire.
+          </p>
+          <p>
+            Son influence se lit surtout dans l'atmosphère intérieure du lieu. Avec elle,
+            Chenonceau n'est plus seulement un espace de fête et de représentation :
+            il devient aussi un lieu de retraite, de silence et de recueillement.
+          </p>
+          <p>
+            Cette évolution modifie aussi la perception des jardins, qui ne sont plus
+            seulement vus comme des décors de prestige, mais aussi comme des espaces de
+            calme et de méditation autour d'une résidence chargée de mémoire.
+          </p>
+        </article>
+      </div>
+
+      <div class="ladies-summary reveal">
+        <article class="summary-card">
+          <p class="feature-label">En résumé</p>
+          <h3>Pourquoi leur influence est si importante</h3>
+          <p>
+            Catherine Briçonnet donne la forme initiale du château, Diane de Poitiers
+            lui apporte son jardin et son pont, Catherine de Médicis lui offre sa galerie
+            et son prestige politique, et Louise de Lorraine y laisse une trace plus
+            intérieure et émotionnelle. C'est cette succession d'influences féminines
+            qui explique l'identité si particulière de Chenonceau.
+          </p>
+          <p>
+            Les jardins résument parfaitement cet héritage : ils portent à la fois
+            l'équilibre recherché par Catherine Briçonnet, l'ordre majestueux voulu
+            par Diane de Poitiers, la dimension de représentation développée par
+            Catherine de Médicis et l'atmosphère plus intime associée à Louise de Lorraine.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Architecture</p>
+        <h2>Ce qui rend Chenonceau immédiatement reconnaissable</h2>
+      </div>
+
+      <div class="architecture-grid">
+        <article class="feature feature-large reveal">
+          <p class="feature-label">Signature</p>
+          <h3>La grande galerie posée sur le Cher</h3>
+          <p>
+            Peu de châteaux offrent une silhouette aussi théâtrale. Cette longue galerie,
+            construite au-dessus de la rivière, donne à Chenonceau une identité visuelle
+            incomparable et une relation directe avec le paysage.
+          </p>
+        </article>
+
+        <article class="feature reveal">
+          <p class="feature-label">Jardins</p>
+          <h3>Deux compositions majeures</h3>
+          <p>
+            Les jardins de Diane de Poitiers et de Catherine de Médicis montrent deux
+            visions du prestige princier, entre symétrie, perspectives et contrôle du décor.
+          </p>
+        </article>
+
+        <article class="feature reveal">
+          <p class="feature-label">Intérieurs</p>
+          <h3>Mobilier, tapisseries et cuisine</h3>
+          <p>
+            Les salles conservent l'atmosphère d'une demeure habitée, avec cheminées,
+            tapisseries et cuisines installées dans les piles du moulin.
+          </p>
+        </article>
+
+        <article class="feature reveal">
+          <p class="feature-label">Mémoire</p>
+          <h3>Un monument vivant</h3>
+          <p>
+            Chenonceau n'est pas seulement un décor Renaissance : c'est un lieu traversé
+            par l'histoire politique, artistique et militaire de la France.
+          </p>
+        </article>
+      </div>
+
+      <div class="architecture-photos">
+        <article class="interior-card reveal">
+          <div class="media-frame">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A2teau%20de%20Chenonceau%20-%20gallery%20interior.jpg"
+              alt="Intérieur de la grande galerie du Château de Chenonceau"
+              loading="lazy"
+            >
+          </div>
+          <p class="feature-label">Grande galerie</p>
+          <h3>Une perspective monumentale au-dessus du Cher</h3>
+        </article>
+
+        <article class="interior-card reveal">
+          <div class="media-frame">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/ChenonceauKitchenFireplace.jpg"
+              alt="Cheminée des cuisines du Château de Chenonceau"
+              loading="lazy"
+            >
+          </div>
+          <p class="feature-label">Cuisines</p>
+          <h3>Des espaces de service installés dans les piles du moulin</h3>
+        </article>
+
+        <article class="interior-card reveal">
+          <div class="media-frame">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Chenonceau%20Castle%20Chapel.jpg"
+              alt="Chapelle du Château de Chenonceau"
+              loading="lazy"
+            >
+          </div>
+          <p class="feature-label">Chapelle</p>
+          <h3>Un intérieur plus recueilli, marqué par la lumière des vitraux</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gardens-section" id="jardins">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Jardins</p>
+        <h2>Un ample paysage composé comme un décor de cour</h2>
+      </div>
+
+      <div class="gardens-layout">
+        <article class="garden-spotlight reveal">
+          <div class="media-frame">
+            <img
+              src="https://loirelovers.fr/wp-content/uploads/2023/05/visit-chateau-chenonceau-castle-on-the-river.jpg"
+              alt="Le Château de Chenonceau vu depuis le Cher"
+              loading="lazy"
+            >
+          </div>
+          <p class="feature-label">Vue d'ensemble</p>
+          <h3>Les jardins de Chenonceau prolongent l'architecture dans le paysage.</h3>
+          <p>
+            À Chenonceau, le jardin n'est pas un simple encadrement du château. Il agit
+            comme une extension de la mise en scène Renaissance, avec des tracés réguliers,
+            des allées ordonnées, des perspectives maîtrisées et un dialogue constant
+            entre l'eau, la pierre, les parterres et les arbres.
+          </p>
+        </article>
+
+        <div class="gardens-grid">
+          <article class="garden-card reveal">
+            <p class="feature-label">Diane de Poitiers</p>
+            <h3>Un jardin majestueux et symétrique</h3>
+            <p>
+              Situé près de l'entrée, le jardin de Diane de Poitiers se distingue par sa
+              grande composition géométrique, ses parterres dessinés avec précision et son
+              effet d'ouverture qui prépare le regard à la découverte du château.
+            </p>
+          </article>
+
+          <article class="garden-card reveal">
+            <p class="feature-label">Catherine de Médicis</p>
+            <h3>Un espace plus intime mais très raffiné</h3>
+            <p>
+              Plus resserré, le jardin de Catherine de Médicis crée une ambiance plus
+              proche du palais. Sa disposition plus compacte renforce l'idée d'un lieu
+              de représentation réservé à une cour élégante et cultivée.
+            </p>
+          </article>
+
+          <article class="garden-card reveal">
+            <p class="feature-label">Ambiance</p>
+            <h3>Fleurs, perspectives et calme ligérien</h3>
+            <p>
+              Les massifs fleuris, les lignes nettes des buis et les vues sur le Cher
+              donnent à la promenade un rythme particulier. Le visiteur passe sans cesse
+              d'une sensation de grandeur à une impression plus paisible et contemplative.
+            </p>
+          </article>
+
+          <article class="garden-card reveal">
+            <p class="feature-label">Intérêt</p>
+            <h3>Pourquoi cette partie est essentielle</h3>
+            <p>
+              Les jardins permettent de comprendre Chenonceau dans son ensemble : non
+              seulement comme un monument historique, mais comme une œuvre totale où
+              architecture, pouvoir, nature domestiquée et esthétique se répondent.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Ambiances</p>
+        <h2>Une mise en page pensée comme une promenade visuelle</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <article
+          class="gallery-card gallery-card-wide gallery-photo reveal"
+          style="--card-image: url('https://loirelovers.fr/wp-content/uploads/2023/05/visit-chateau-chenonceau-castle-on-the-river.jpg');"
+        >
+          <span class="gallery-tag">Façade sur l'eau</span>
+          <h3>Le reflet du château transforme l'architecture en paysage.</h3>
+        </article>
+        <article
+          class="gallery-card gallery-photo reveal"
+          style="--card-image: url('https://i0.wp.com/oldworldvoyages.com/wp-content/uploads/2022/04/chateau-de-chenonceau-23-1.jpg?resize=1140%2C760&amp;ssl=1');"
+        >
+          <span class="gallery-tag">Jardin de Diane</span>
+          <h3>Une vue ample du château et de ses abords, entre prestige et équilibre.</h3>
+        </article>
+        <article
+          class="gallery-card gallery-photo reveal"
+          style="--card-image: url('https://cdn-imgix.headout.com/media/images/c8c622c6a1d4d7f28872787b2719aa0d-6160-Paris-LoireValleyCastles-Chambord-ChenonceauSmall-GroupTourfromParis-15.jpg?auto=compress%2Cformat&amp;crop=faces&amp;fit=crop&amp;h=360&amp;q=90&amp;w=705.6');"
+        >
+          <span class="gallery-tag">Galerie</span>
+          <h3>Le château apparaît comme une résidence de lumière posée au-dessus de l'eau.</h3>
+        </article>
+        <article
+          class="gallery-card gallery-photo reveal"
+          style="--card-image: url('https://i.pinimg.com/236x/51/8e/6a/518e6ab2a09a0111514e5f751ec89ce1.jpg');"
+        >
+          <span class="gallery-tag">Appartements</span>
+          <h3>Une image d'ambiance qui rappelle la popularité visuelle de Chenonceau.</h3>
+        </article>
+      </div>
+
+      <div class="photo-sources reveal">
+        <p class="feature-label">Sources photo</p>
+        <p>
+          <a href="https://loirelovers.fr/en/visit-chateau-chenonceau-castle/" target="_blank" rel="noreferrer">Loire Lovers</a>
+          •
+          <a href="https://oldworldvoyages.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Old World Voyages</a>
+          •
+          <a href="https://www.loirevalley-tickets.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Loire Valley Tickets</a>
+          •
+          <a href="https://www.pinterest.com/ideas/chateau-de-chenonceau-pictures/894101929076/" target="_blank" rel="noreferrer">Pinterest</a>
+          •
+          <a href="https://www.worldhistory.org/Chateau_de_Chenonceau/" target="_blank" rel="noreferrer">World History Encyclopedia</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section visit-section" id="visite">
+      <div class="visit-panel reveal">
+        <p class="eyebrow">Préparer la visite</p>
+        <h2>Informations utiles pour organiser une découverte du site</h2>
+
+        <div class="visit-grid">
+          <article>
+            <h3>Adresse</h3>
+            <p>Château de Chenonceau<br>37150 Chenonceaux<br>France</p>
+          </article>
+          <article>
+            <h3>Accès</h3>
+            <p>
+              Le château se situe dans le département d'Indre-et-Loire, au cœur des
+              itinéraires touristiques de la vallée de la Loire, et reste accessible
+              en voiture comme depuis les villes voisines.
+            </p>
+          </article>
+          <article>
+            <h3>À ne pas manquer</h3>
+            <p>
+              La galerie sur le Cher, les jardins historiques, les cuisines aménagées
+              dans les piles du moulin et les appartements liés aux grandes figures du lieu.
+            </p>
+          </article>
+          <article>
+            <h3>Conseil</h3>
+            <p>
+              Pour un projet scolaire ou une vraie visite, il est utile de compléter
+              cette page avec les horaires et tarifs officiels les plus récents.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="visit-aside reveal">
+        <p class="aside-label">Pourquoi visiter Chenonceau ?</p>
+        <ul class="visit-points">
+          <li>Pour voir l'un des profils les plus célèbres des châteaux de la Loire.</li>
+          <li>Pour comprendre le rôle de plusieurs femmes de pouvoir dans son histoire.</li>
+          <li>Pour relier architecture Renaissance, jardins et histoire de France.</li>
+          <li>Pour découvrir un monument qui a aussi connu les réalités des guerres modernes.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section closing-section">
+      <details class="bibliography-panel reveal">
+        <summary>Bibliographie et crédits du projet</summary>
+        <div class="bibliography-content">
+          <div>
+            <p class="feature-label">Bibliographie courte</p>
+            <ul class="bibliography-list">
+              <li><a href="https://www.worldhistory.org/Chateau_de_Chenonceau/" target="_blank" rel="noreferrer">World History Encyclopedia, “Château de Chenonceau”</a></li>
+              <li><a href="https://loirelovers.fr/en/visit-chateau-chenonceau-castle/" target="_blank" rel="noreferrer">Loire Lovers, “Visit the castle of Chenonceau”</a></li>
+              <li><a href="https://oldworldvoyages.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Old World Voyages, “Château de Chenonceau: The Ladies’ Château”</a></li>
+              <li><a href="https://www.loirevalley-tickets.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Loire Valley Tickets, “Château de Chenonceau”</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Katherine_Bri%C3%A7onnet" target="_blank" rel="noreferrer">Wikipedia, “Katherine Briçonnet”</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="feature-label">Auteurs du projet</p>
+            <p class="project-credits">
+              Ce projet a été créé par les personnes suivantes : Anghel Cristian,
+              Zoltoreanu Adrian Nicolas, Cazacioc Edvin Stefan et Radu Alexandru Marian.
+            </p>
+          </div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Château de Chenonceau • Présentation en français</p>
+    <p>&copy; <span id="current-year"></span> • Projet de site culturel</p>
+  </footer>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
