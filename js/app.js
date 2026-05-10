@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu");
   const menuButton = document.getElementById("btn-hamburger");
   const navLinks = document.querySelectorAll(".nav-links a");
+  const sectionNavLinks = Array.from(navLinks).filter((link) => link.getAttribute("href")?.startsWith("#"));
   const allMenuLinks = document.querySelectorAll(".nav-links a, .mobile-menu a");
   const revealElements = document.querySelectorAll(".reveal");
   const sections = document.querySelectorAll("main section[id]");
@@ -51,14 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 
-  if (sections.length && navLinks.length) {
+  if (sections.length && sectionNavLinks.length) {
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
           return;
         }
 
-        navLinks.forEach((link) => {
+        sectionNavLinks.forEach((link) => {
           const isActive = link.getAttribute("href") === `#${entry.target.id}`;
           link.classList.toggle("active", isActive);
         });

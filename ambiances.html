@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ambiances visuelles du Château de Chenonceau.">
+  <title>Ambiances - Château de Chenonceau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header subpage-header">
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+      <a class="brand" href="index.html"><span class="brand-mark">Chenonceau</span><span class="brand-sub">Château des Dames</span></a>
+      <ul class="nav-links"><li><a href="histoire.html">Histoire</a></li><li><a href="dames.html">Les Dames</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="jardins.html">Jardins</a></li><li><a class="active" href="ambiances.html">Ambiances</a></li><li><a href="visite.html">Visite</a></li><li><a href="bibliographie.html">Bibliographie</a></li></ul>
+      <button id="btn-hamburger" class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu"><a href="histoire.html">Histoire</a><a href="dames.html">Les Dames</a><a href="architecture.html">Architecture</a><a href="jardins.html">Jardins</a><a href="ambiances.html">Ambiances</a><a href="visite.html">Visite</a><a href="bibliographie.html">Bibliographie</a></div>
+  </header>
+  <main class="subpage-main">
+    <section class="section gallery-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Ambiances</p>
+        <h2>Une mise en page pensée comme une promenade visuelle</h2>
+        <div class="back-link">
+          <a class="button button-secondary" href="index.html">Retour à l'accueil</a>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card gallery-card-wide gallery-photo reveal" style="--card-image: url('https://loirelovers.fr/wp-content/uploads/2023/05/visit-chateau-chenonceau-castle-on-the-river.jpg');">
+          <span class="gallery-tag">Façade sur l'eau</span>
+          <h3>Le reflet du château transforme le bâtiment en paysage.</h3>
+        </article>
+        <article class="gallery-card gallery-photo reveal" style="--card-image: url('https://i0.wp.com/oldworldvoyages.com/wp-content/uploads/2022/04/chateau-de-chenonceau-23-1.jpg?resize=1140%2C760&amp;ssl=1');">
+          <span class="gallery-tag">Jardin de Diane</span>
+          <h3>Une grande vue du château et de ses environs, entre prestige et équilibre.</h3>
+        </article>
+        <article class="gallery-card gallery-photo reveal" style="--card-image: url('https://cdn-imgix.headout.com/media/images/c8c622c6a1d4d7f28872787b2719aa0d-6160-Paris-LoireValleyCastles-Chambord-ChenonceauSmall-GroupTourfromParis-15.jpg?auto=compress%2Cformat&amp;crop=faces&amp;fit=crop&amp;h=360&amp;q=90&amp;w=705.6');">
+          <span class="gallery-tag">Galerie</span>
+          <h3>Le château ressemble à une demeure lumineuse posée au-dessus de l'eau.</h3>
+        </article>
+        <article class="gallery-card gallery-photo reveal" style="--card-image: url('https://i.pinimg.com/236x/51/8e/6a/518e6ab2a09a0111514e5f751ec89ce1.jpg');">
+          <span class="gallery-tag">Appartements</span>
+          <h3>Une image qui rappelle à quel point Chenonceau est connu et apprécié.</h3>
+        </article>
+      </div>
+
+      <div class="photo-sources reveal">
+        <p class="feature-label">Sources photo</p>
+        <p>
+          <a href="https://loirelovers.fr/en/visit-chateau-chenonceau-castle/" target="_blank" rel="noreferrer">Loire Lovers</a>
+          •
+          <a href="https://oldworldvoyages.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Old World Voyages</a>
+          •
+          <a href="https://www.loirevalley-tickets.com/chateau-de-chenonceau/" target="_blank" rel="noreferrer">Loire Valley Tickets</a>
+          •
+          <a href="https://www.pinterest.com/ideas/chateau-de-chenonceau-pictures/894101929076/" target="_blank" rel="noreferrer">Pinterest</a>
+          •
+          <a href="https://www.worldhistory.org/Chateau_de_Chenonceau/" target="_blank" rel="noreferrer">World History Encyclopedia</a>
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Château de Chenonceau • Ambiances</p><p>&copy; <span id="current-year"></span> • Projet de site culturel</p></footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
