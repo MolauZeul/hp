@@ -800,6 +800,13 @@ main,
   border-top: 1px solid var(--line);
 }
 
+.bibliography-box {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .bibliography-list {
   margin: 0.9rem 0 0;
   padding-left: 1.2rem;
@@ -815,6 +822,17 @@ main,
   margin-top: 0.9rem;
   line-height: 1.9;
   color: var(--text-muted);
+}
+
+.credits-box p {
+  margin: 0.65rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.credits-box .project-credits,
+.credits-box .project-class {
+  color: var(--text);
 }
 
 .visit-panel {
